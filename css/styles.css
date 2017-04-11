@@ -1,0 +1,143 @@
+/*** Basic Styles ***/
+
+/*
+* {
+    border: 1px solid darkgreen;
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Merriweather', serif;
+    color: #2D3945;
+
+}
+
+header {
+    background-color: #2D3945;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h3 {
+    color: #9DA3A8;
+    font-weight: 100;
+}
+
+form,
+.intro {
+    max-width: 400px;
+    margin: 0 auto; /*centers the form content*/
+}
+
+form {
+    border-top: 1px solid #000;
+}
+
+
+fieldset {
+    border: none;
+    margin: 0;
+}
+
+
+
+legend {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+label {
+    display: block; /*makes a line break after each label*/
+    padding: 1em 0;
+    color: #617383;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background-color: #EFF0F1;
+    border: none;
+    border-radius: 5px; /*for round corners*/
+    padding: 1.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    outline: none;
+}
+
+
+select#state {
+    color: #A8ADB2;
+}
+
+option {
+    color: #617383;
+}
+
+
+
+
+
+input#zip {
+    width:10em;
+}
+
+
+input:focus {
+    border: 2px solid #46698B;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked{
+    background-color: #489EF9;
+}
+
+button {
+    background-color: #4EBBB5;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 1.5em;
+    width: 100%;
+}
+
+.intro {
+    border-bottom: 4px solid #000;
+    margin-bottom: 5px;
+    padding: 1.5em 0;
+}
+
+.contact {
+    border-bottom: 2px solid #000;
+}
+
+.light {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+::placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #A8ADB2;
+    padding-right: 5px; /*prevents the text from being cut on the right side*/
+}
