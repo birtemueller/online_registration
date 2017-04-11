@@ -23,11 +23,12 @@ header {
     padding: 1em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
     text-align: center;
 }
 
-h3 {
+h3,
+.copyright {
     color: #9DA3A8;
     font-weight: 100;
 }
@@ -117,6 +118,7 @@ button {
     border-radius: 5px;
     color: #fff;
     padding: 1.5em;
+    margin: 1em 0;
     width: 100%;
 }
 
@@ -140,4 +142,8 @@ button {
     font-style: italic;
     color: #A8ADB2;
     padding-right: 5px; /*prevents the text from being cut on the right side*/
+}
+
+.copyright {
+    font-style: italic;
 }
