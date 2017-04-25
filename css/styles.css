@@ -136,6 +136,14 @@ button {
     padding-right: 5px; /*prevents the text from being cut on the right side*/
 }
 
+:-ms-input-placeholder { /* IE10–11 */
+    text-align: right !important;
+    font-style: italic !important;
+    color: #A8ADB2 !important;
+    padding-right: 5px !important;
+
+}
+
 .copyright {
     font-style: italic;
 }
