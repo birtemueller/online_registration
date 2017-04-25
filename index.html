@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <title>The Code Review | Newsletter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -14,7 +15,7 @@
     </header>
 
     <div class="intro">
-        <h2>Signup for our Newsletter</h2>
+        <h2>Signup for our newsletter</h2>
         <h3>Get the latest news on how your code is doing right in your inbox</h3>
     </div>
 
@@ -22,24 +23,27 @@
         <fieldset class="contact">
             <legend>Contact Information</legend>
 
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="user_name" placeholder="Required">
 
-            <label for="mail">Email Address</label>
-            <input type="email" id="mail" name="user_email" placeholder="Required">
-
-            <label for="number">Phone Number</label>
-            <input type="tel" id="number" name="user_phone">
-
-            <label for="address">Street Address</label>
-            <input type="text" id="address" name="user_address">
+            <label class="contact-input" for="name">Full Name</label>
+            <input type="text" id="name" name="user_name" placeholder="Required" required>
 
 
-            <label for="city">City</label>
-            <input type="text" id="city" name="user_city">
+            <label class="contact-input" for="mail">Email Address</label>
+            <input type="email" id="mail" name="user_email" placeholder="Required" required>
 
-            <label for="state">State</label>
+            <label class="contact-input" for="number">Phone Number</label>
+            <input type="tel" id="number" name="user_phone" placeholder="please use international format">
+
+            <label class="contact-input" for="address">Street Address</label>
+            <input type="text" id="address" name="user_address" placeholder="German residence only">
+
+
+            <label class="contact-input" for="city">City</label>
+            <input type="text" id="city" name="user_city" placeholder="German residence only">
+
+            <label class="contact-input" for="state">State</label>
             <select id="state" name="user_state">
+                <option value="" selected disabled>Choose State</option>
                 <option value="baden_wuerttemberg">Baden Württemberg</option>
                 <option value="bayern">Bayern</option>
                 <option value="berlin">Berlin</option>
@@ -49,6 +53,7 @@
                 <option value="hessen">Hessen</option>
                 <option value="mecklenburg_vorpommern">Mecklenburg Vorpommern</option>
                 <option value="niedersachsen">Niedersachsen</option>
+                <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
                 <option value="rheinland_pfalz">Rheinland-Pfalz</option>
                 <option value="saarland">Saarland</option>
                 <option value="sachsen">Sachsen</option>
@@ -57,31 +62,35 @@
                 <option value="thueringen">Thüringen</option>
             </select>
 
-            <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="user_zip" required pattern="[0-9]{5}">
+            <label class="contact-input" for="zip">Zip Code</label>
+            <div class="zip-container"> <!-- wrapping this input field in an additional div helps to left-align it and still have it alligned with the other input fields -->
+                <input class="zip" type="text" id="zip" name="user_zip" required pattern="[0-9]{5}">
+            </div>
         </fieldset>
 
-        <fieldsetS>
-            <legend>Newsletter</legend>
-            <label>Select the newsletters you would like to receive</label>
+        <div class="newsletter">
+            <fieldset >
+                    <legend>Newsletter</legend>
+                    <label>Select the newsletters you would like to receive</label>
 
-            <input type="checkbox" id="html_news" value="newsletter_html" name="newsletter_interest"><label for="html_news" class="light">HTML News</label><br>
+                    <input type="checkbox" id="html_news" value="newsletter_html" name="newsletter_interest"><label for="html_news" class="light">HTML News</label><br>
 
-            <input type="checkbox" id="css_news" value="newsletter_css" name="newsletter_interest"><label for="css_news" class="light">CSS News</label><br>
+                    <input type="checkbox" id="css_news" value="newsletter_css" name="newsletter_interest"><label for="css_news" class="light">CSS News</label><br>
 
-            <input type="checkbox" id="javascript_news" value="newsletter_javascript" name="newsletter_interest"><label for="javascript_news" class="light">JavaScript News</label>
+                    <input type="checkbox" id="javascript_news" value="newsletter_javascript" name="newsletter_interest"><label for="javascript_news" class="light">JavaScript News</label>
 
-            <label>Newsletter Format</label>
-            <input type="radio" id"html" name="newsletter_format"><label for="html" class="light">HTML</label><br>
-            <input type="radio" id"plain_text" name="newsletter_format"><label for="plain_text" class="light">Plain Text</label><br>
-            <label for="comments">Other topics you'd like to hear about</label>
-            <textarea id="comments" name="user_comments"></textarea>
+                    <label>Newsletter Format</label>
+                    <input type="radio" id="html" name="newsletter_format"><label for="html" class="light">HTML</label><br>
+                    <input type="radio" id="plain_text" name="newsletter_format"><label for="plain_text" class="light">Plain Text</label><br>
+                    <label for="comments">Other topics you'd like to hear about</label>
+                    <textarea id="comments" name="user_comments" ></textarea>
 
+            </fieldset>
+        </div>
+        <fieldset>
+            <button type="submit">Sign Up</button>
         </fieldset>
-
-        <button type="submit">Sign Up</button>
-
-        <p>Copyright The Code Review</p>
+        <p class="copyright">Copyright The Code Review</p>
 
     </form>
 </body>

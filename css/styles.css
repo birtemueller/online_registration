@@ -1,9 +1,5 @@
 /*** Basic Styles ***/
 
-/*
-* {
-    border: 1px solid darkgreen;
-}*/
 
 * {
     box-sizing: border-box;
@@ -49,7 +45,10 @@ fieldset {
     margin: 0;
 }
 
-
+.newsletter {
+    background-color: honeydew;
+    border-radius: 5px;
+}
 
 legend {
     font-size: 1.4em;
@@ -65,24 +64,19 @@ label {
 }
 
 input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
 input[type="email"],
 input[type="number"],
-input[type="search"],
 input[type="tel"],
-input[type="time"],
-input[type="url"],
 textarea,
 select {
     background-color: #EFF0F1;
     border: none;
     border-radius: 5px; /*for round corners*/
-    padding: 1.5em;
     margin-bottom: 1em;
+    padding: 1.5em;
     width: 100%;
     outline: none;
+    transition: background-color 0.5s ease;
 }
 
 
@@ -95,9 +89,6 @@ option {
 }
 
 
-
-
-
 input#zip {
     width:10em;
 }
@@ -105,6 +96,7 @@ input#zip {
 
 input:focus {
     border: 2px solid #46698B;
+    background-color: honeydew;
 }
 
 input[type="radio"]:checked,
@@ -147,3 +139,45 @@ button {
 .copyright {
     font-style: italic;
 }
+
+
+@media screen and (min-width: 768px){
+    form,
+    .intro {
+        max-width: 700px;
+    }
+
+    .contact-input {
+        display: inline-block;
+        float: left;
+        clear: both;
+    }
+
+    input[type="text"]:not(.zip),
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    select,
+    .zip-container {
+        width: 70%;
+        display: block;
+        float: right;
+    }
+
+
+    .zip {
+        display: block;
+        float: left;
+    }
+
+
+
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
